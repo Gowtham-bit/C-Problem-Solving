@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+	int n,i,a,c,rev=0,rem,product=1,sum=0;
+	scanf("%d",&n);
+	a=n;
+	while(n!=0)
+	{
+		rem = n % 10;
+        rev = rev * 10 + rem;
+        n /= 10;
+        product=product*rem;
+        sum=sum+rem;
+	}
+	if(rev==a)
+	{
+		printf("Palindrome");
+		printf("%d",product);
+	}
+	else
+	{
+		printf("Not a palindrome");
+		printf("%d",sum);
+	}
+}
