@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+    int binary, decimal = 0, i = 0, remainder;
+    printf("Enter the binary number: ");
+    scanf("%d", &binary);
+    for(i=0;binary!=0;i++)
+	{
+        remainder = binary % 10;
+        decimal = decimal + remainder * pow(2, i);
+        binary /= 10;
+    }
+    printf("The decimal equivalent is: %d\n", decimal);
+    return 0;
+}
